@@ -1,9 +1,10 @@
-using System.Collections.Generic;
 using System.ComponentModel;
-using TadPoleFramework;
-using TadPoleFramework.Core;
-using UnityEngine;
-namespace TadPoleFramework
+using _GameFiles.Scripts.EventArgs;
+using _GameFiles.Scripts.Models;
+using EventDrivenFramework;
+using EventDrivenFramework.Core;
+
+namespace _GameFiles.Scripts.Managers
 {
     public class LevelManager : BaseManager
     {
@@ -18,7 +19,7 @@ namespace TadPoleFramework
 
         protected override void Start()
         {
-
+            Broadcast(new SceneStartedEventArgs(_gameModel.Level));
         }
         public void InjectModel(GameModel gameModel)
         {

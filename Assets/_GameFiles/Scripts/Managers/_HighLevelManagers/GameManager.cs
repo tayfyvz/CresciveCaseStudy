@@ -1,15 +1,17 @@
 using System.ComponentModel;
-using TadPoleFramework.Core;
-using TadPoleFramework.Game;
+using _GameFiles.Scripts.Models;
+using EventDrivenFramework;
+using EventDrivenFramework.Core;
+using EventDrivenFramework.Game;
 using UnityEngine;
 
-
-namespace TadPoleFramework
+namespace _GameFiles.Scripts.Managers._HighLevelManagers
 {
     public class GameManager : BaseGameManager
     {
         [SerializeField] private LevelManager levelManager;
-        private GameModel gameModel;
+        [SerializeField] private ConstructionManager constructionManager;
+        private GameModel _gameModel;
         public override void Receive(BaseEventArgs baseEventArgs)
         {
             switch (baseEventArgs)
@@ -24,23 +26,21 @@ namespace TadPoleFramework
             IMediator mediator = new BaseMediator();
             levelManager.InjectMediator(mediator);
             levelManager.InjectManager(this);
-        }
-
-        protected override void Start()
-        {
-            base.Start();
-            /*levelManager.InjectModel(gameModel);*/
+            levelManager.InjectModel(_gameModel);
+            
+            constructionManager.InjectMediator(mediator);
+            constructionManager.InjectManager(this);
         }
 
         public void InjectModel(GameModel gameModel)
         {
-            this.gameModel = gameModel;
-            this.gameModel.PropertyChanged += GameMOdelProperetyChangedHandler;
+            this._gameModel = gameModel;
+            this._gameModel.PropertyChanged += GameMOdelProperetyChangedHandler;
         }
 
         private void GameMOdelProperetyChangedHandler(object sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName == nameof(gameModel.InstantScore))
+            if (e.PropertyName == nameof(_gameModel.InstantScore))
             {
                 
             }

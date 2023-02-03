@@ -1,10 +1,7 @@
-using System.Collections;
-using TadPoleFramework.Core;
-using TadPoleFramework.UI;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+using EventDrivenFramework.Core;
+using EventDrivenFramework.UI;
 
-namespace TadPoleFramework
+namespace _GameFiles.Scripts.Presenters
 {
     public class GameViewPresenter : BasePresenter
     {

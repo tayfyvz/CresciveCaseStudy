@@ -1,10 +1,6 @@
-using TadPoleFramework;
-using TadPoleFramework.UI;
-using TMPro;
-using UnityEngine;
-using UnityEngine.UI;
+using EventDrivenFramework.UI;
 
-namespace TadPoleFramework
+namespace _GameFiles.Scripts.Views
 {
     public class GameView : BaseView
     {
