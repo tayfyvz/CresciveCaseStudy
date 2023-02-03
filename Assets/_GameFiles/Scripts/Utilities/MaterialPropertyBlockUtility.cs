@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace _GameFiles.Scripts.Utilities
 {
-    public static class MaterialPropertyBlockSetter
+    public static class MaterialPropertyBlockUtility
     {
         private static readonly int BaseColor = Shader.PropertyToID("_BaseColor");
 

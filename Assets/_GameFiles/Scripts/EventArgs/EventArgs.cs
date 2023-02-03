@@ -21,4 +21,13 @@ namespace _GameFiles.Scripts.EventArgs
     {
         
     }
+
+    public class StartDrawEventArgs : BaseEventArgs
+    {
+        
+    }
+    public class EndDrawEventArgs : BaseEventArgs
+    {
+        
+    }
 }

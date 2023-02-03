@@ -57,13 +57,13 @@ namespace _GameFiles.Scripts.Managers
                         SetCube(pos, cubeColor);
                     }
 
-                    y+=.5f;
+                    y += 0.5f;
                 }
 
-                x+=.5f;
+                x += 0.5f;
             }
             
-            Broadcast(new ConstructionCreatedEventArgs());
+            BroadcastUpward(new ConstructionCreatedEventArgs());
         }
         
         private void SetCube(Vector3 pos, Color color)
@@ -73,7 +73,7 @@ namespace _GameFiles.Scripts.Managers
             _activeCubes.Add(cube);
             
             cube.transform.position = pos;
-            MaterialPropertyBlockSetter.ColorSetter(cube.GetComponent<Renderer>(), color);
+            MaterialPropertyBlockUtility.ColorSetter(cube.GetComponent<Renderer>(), color);
             cube.GetComponent<Renderer>().material.color = color;
         }
     }

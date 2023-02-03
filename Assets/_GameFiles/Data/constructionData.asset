@@ -15,5 +15,11 @@ MonoBehaviour:
   constructionTextures:
   - {fileID: 2800000, guid: 5bbac03ab23455d4f996ed1cca0ead4d, type: 3}
   - {fileID: 2800000, guid: 313dc08fea45a51468c626a159bf1dba, type: 3}
+  - {fileID: 2800000, guid: e5ab40fc47499734b87d4d4cd050ac99, type: 3}
+  - {fileID: 2800000, guid: b44a2cb15f17541429e0aec1362215c4, type: 3}
+  - {fileID: 2800000, guid: 993fe16488cba1443b020041b854be32, type: 3}
+  - {fileID: 2800000, guid: e6a817ba832b39d439c5900804130d10, type: 3}
+  - {fileID: 2800000, guid: 4f7ff3c66ba01ca498195ea5c3e55078, type: 3}
+  - {fileID: 2800000, guid: b6f8b07f70d355d488a8680ca72da4be, type: 3}
   maxCube: 650
   cubeController: {fileID: 444430769546572305, guid: b2839ecafc9e6a743b03581e7aa1c8bc, type: 3}

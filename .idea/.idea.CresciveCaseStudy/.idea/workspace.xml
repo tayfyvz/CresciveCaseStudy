@@ -13,7 +13,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/_GameFiles/Scripts/Controllers/CubeController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_GameFiles/Scripts/ScriptableObjects/ConstructionData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_GameFiles/Scripts/Utilities/MaterialPropertyBlockSetter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_GameFiles/Scripts/Structs/VertexTriangles.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_GameFiles/Scripts/Utilities/MaterialPropertyBlockUtility.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -75,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675427618821</updated>
-      <workItem from="1675427632566" duration="11392000" />
+      <workItem from="1675427632566" duration="17887000" />
     </task>
     <servers />
   </component>
