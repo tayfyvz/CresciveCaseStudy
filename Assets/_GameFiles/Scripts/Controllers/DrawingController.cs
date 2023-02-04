@@ -52,6 +52,10 @@ namespace _GameFiles.Scripts.Controllers
         {
             return LineRenderer.GetPosition(PointsCount - 1);
         }
+        public Vector3 GetMinPoint()
+        {
+            return LineRenderer.bounds.min;
+        }
 
         public void SetPointsDistance(float distance)
         {

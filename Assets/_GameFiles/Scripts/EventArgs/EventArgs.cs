@@ -1,4 +1,5 @@
 using EventDrivenFramework.Core;
+using UnityEngine;
 
 namespace _GameFiles.Scripts.EventArgs
 {
@@ -31,8 +32,13 @@ namespace _GameFiles.Scripts.EventArgs
         
     }
 
-    public class DrawIsCreatedEventArgs : BaseEventArgs
+    public class DrawingIsCreatedEventArgs : BaseEventArgs
     {
-        
+        public Vector3 StartPos { get; set; }
+
+        public DrawingIsCreatedEventArgs(Vector3 startPos)
+        {
+            StartPos = startPos;
+        }
     }
 }

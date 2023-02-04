@@ -110,7 +110,7 @@ namespace _GameFiles.Scripts.Managers
             Vector3 offset = _drawing.transform.position - _drawing.transform.TransformPoint(_drawing.LineRenderer.bounds.center);
             _drawing.transform.position = middlePoint + offset;
             _drawing.transform.localScale *= 2;
-            Broadcast(new DrawIsCreatedEventArgs());
+            Broadcast(new DrawingIsCreatedEventArgs(_drawing.GetMinPoint()));
         }
     }
 }
