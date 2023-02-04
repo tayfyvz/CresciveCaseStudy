@@ -30,4 +30,9 @@ namespace _GameFiles.Scripts.EventArgs
     {
         
     }
+
+    public class DrawIsCreatedEventArgs : BaseEventArgs
+    {
+        
+    }
 }

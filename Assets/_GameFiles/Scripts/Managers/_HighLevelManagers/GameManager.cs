@@ -13,7 +13,8 @@ namespace _GameFiles.Scripts.Managers._HighLevelManagers
         [SerializeField] private LevelManager levelManager;
         [SerializeField] private InputManager inputManager;
         [SerializeField] private ConstructionManager constructionManager;
-        [SerializeField] private DrawManager drawManager;
+        [SerializeField] private DrawingManager drawingManager;
+        [SerializeField] private BallManager ballManager;
         private GameModel _gameModel;
         public override void Receive(BaseEventArgs baseEventArgs)
         {
@@ -40,8 +41,11 @@ namespace _GameFiles.Scripts.Managers._HighLevelManagers
             constructionManager.InjectMediator(mediator);
             constructionManager.InjectManager(this);
             
-            drawManager.InjectMediator(mediator);
-            drawManager.InjectManager(this);
+            drawingManager.InjectMediator(mediator);
+            drawingManager.InjectManager(this);
+            
+            ballManager.InjectMediator(mediator);
+            ballManager.InjectManager(this);
         }
 
         public void InjectModel(GameModel gameModel)
