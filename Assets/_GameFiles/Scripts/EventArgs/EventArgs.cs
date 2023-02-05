@@ -35,10 +35,12 @@ namespace _GameFiles.Scripts.EventArgs
     public class DrawingIsCreatedEventArgs : BaseEventArgs
     {
         public Vector3 StartPos { get; set; }
+        public float Angle { get; set; }
 
-        public DrawingIsCreatedEventArgs(Vector3 startPos)
+        public DrawingIsCreatedEventArgs(Vector3 startPos, float angle)
         {
             StartPos = startPos;
+            Angle = angle;
         }
     }
 }

@@ -24,7 +24,8 @@ namespace _GameFiles.Scripts.Controllers
             LineRenderer = GetComponent<LineRenderer>();
             Rb2D = GetComponent<Rigidbody2D>();
             EdgeCollider = GetComponent<EdgeCollider2D>();
-            
+
+            gameObject.tag = "Drawing";
             Rb2D.isKinematic = true;
         }
 

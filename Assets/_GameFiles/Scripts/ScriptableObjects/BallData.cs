@@ -7,10 +7,19 @@ namespace _GameFiles.Scripts.ScriptableObjects
 
     public class BallData : ScriptableObject
     {
-        [SerializeField] private int maxBall;
         [SerializeField] private BallController ballControllerPrefabPrefab;
+        [SerializeField] private int maxBall;
+        [SerializeField] private int explodeAmount;
+        [SerializeField] private float checkRadius;
+        [SerializeField] private LayerMask cubeLayer;
+        [SerializeField] private LayerMask drawingLayer;
 
-        public int MaxBall => maxBall;
         public BallController BallControllerPrefab => ballControllerPrefabPrefab;
+        public int MaxBall => maxBall;
+        public int ExplodeAmount => explodeAmount;
+        public float CheckRadius => checkRadius;
+        public LayerMask CubeLayer => cubeLayer;
+        public LayerMask DrawingLayer => drawingLayer;
+
     }
 }

@@ -18,7 +18,7 @@ namespace _GameFiles.Scripts.Managers
             switch (baseEventArgs)
             {
                 case DrawingIsCreatedEventArgs drawIsCreatedEventArgs:
-                    ReleaseBall(drawIsCreatedEventArgs.StartPos);
+                    ReleaseBall(drawIsCreatedEventArgs.StartPos, drawIsCreatedEventArgs.Angle);
                     break;
             }
         }
@@ -37,11 +37,12 @@ namespace _GameFiles.Scripts.Managers
             }
         }
 
-        private void ReleaseBall(Vector3 firstPointPos)
+        private void ReleaseBall(Vector3 firstPointPos, float angle)
         {
             BallController ball = _ballsQueue.Dequeue();
             ball.gameObject.SetActive(true);
-            ball.transform.position = new Vector3(firstPointPos.x + 1 , height, 25);
+            Vector3 pos = new Vector3(firstPointPos.x + 1 , height, 24.4f);
+            ball.SetBall(ballData.CheckRadius,angle, ballData.ExplodeAmount, pos, ballData.CubeLayer, ballData.DrawingLayer);
         }
     }
 }

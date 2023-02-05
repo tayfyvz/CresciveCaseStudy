@@ -106,11 +106,14 @@ namespace _GameFiles.Scripts.Managers
         {
             _drawing = _currentLine;
             
-            Vector3 middlePoint = new Vector3(-5, 10, 25);
+            Vector3 middlePoint = new Vector3(-4, 10, 24.4f);
             Vector3 offset = _drawing.transform.position - _drawing.transform.TransformPoint(_drawing.LineRenderer.bounds.center);
             _drawing.transform.position = middlePoint + offset;
             _drawing.transform.localScale *= 2;
-            Broadcast(new DrawingIsCreatedEventArgs(_drawing.GetMinPoint()));
+            float slopeAngle = AngleUtility.GetAngleOfLineBetweenTwoPoints(_drawing.LineRenderer.GetPosition(0),
+                                                                                _drawing.LineRenderer.GetPosition(1));
+            Debug.Log(slopeAngle + " pos : " + _drawing.LineRenderer.GetPosition(1));
+            Broadcast(new DrawingIsCreatedEventArgs(_drawing.GetMinPoint(), slopeAngle));
         }
     }
 }
