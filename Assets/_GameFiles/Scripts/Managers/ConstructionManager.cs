@@ -55,6 +55,7 @@ namespace _GameFiles.Scripts.Managers
                     
                     if (cubeColor.a != 0f)
                     {
+                        _startCubeCounter++;
                         Vector3 pos = new Vector3(x, y, 25);
                         ActivateCube(pos, cubeColor);
                     }
@@ -66,7 +67,6 @@ namespace _GameFiles.Scripts.Managers
             }
 
             _explodedCubeCounter = 0;
-            _startCubeCounter++;
             BroadcastUpward(new ConstructionCreatedEventArgs());
         }
         
