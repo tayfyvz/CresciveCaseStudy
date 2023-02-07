@@ -11,6 +11,7 @@ namespace _GameFiles.Scripts.Managers
             
         }
 
+        //Checks there is an input or not and sends the packages.
         private void Update()
         {
             if (Input.GetMouseButtonDown(0))

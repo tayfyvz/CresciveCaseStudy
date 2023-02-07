@@ -2,10 +2,12 @@ using UnityEngine;
 
 namespace _GameFiles.Scripts.Utilities
 {
+    //Responsible for Material Property Block.
     public static class MaterialPropertyBlockUtility
     {
         private static readonly int BaseColor = Shader.PropertyToID("_BaseColor");
 
+        //Sets property block for material instances.
         public static void ColorSetter(Renderer renderer, Color color)
         {
             MaterialPropertyBlock materialPropertyBlock = new MaterialPropertyBlock();

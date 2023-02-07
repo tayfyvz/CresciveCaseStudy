@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: ballData
   m_EditorClassIdentifier: 
   ballControllerPrefabPrefab: {fileID: 7107044744342132839, guid: d0d7429e4799c0d45938ac08e114fa73, type: 3}
-  maxBall: 20
-  explodeAmount: 10
+  maxBallNum: 2
+  explodeAmount: 30
   checkRadius: 2
+  releaseHeight: 20
   cubeLayer:
     serializedVersion: 2
     m_Bits: 64

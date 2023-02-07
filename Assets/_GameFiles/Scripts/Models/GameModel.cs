@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace _GameFiles.Scripts.Models
 {
+    //Contains playerPrefs.
     public class GameModel : BaseGameModel
     {
         #region Score //////////////////////////////////////////////////////

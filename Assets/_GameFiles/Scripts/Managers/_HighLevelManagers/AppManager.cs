@@ -5,14 +5,11 @@ using EventDrivenFramework.Core;
 // using GameAnalyticsSDK;
 namespace _GameFiles.Scripts.Managers._HighLevelManagers
 {
+    //Responsible for ElephantSDK and GameAnalyticsSDK.
     public class AppManager : BaseAppManager
     {
         public override void Receive(BaseEventArgs baseEventArgs)
         {
-            switch (baseEventArgs)
-            {
-                
-            }
         }
 
         /*protected override void Start()

@@ -11,12 +11,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4e11437f4e324deabbafa7f3d1fc84a21b800/0d/def191a5/Rigidbody2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_GameFiles/Scripts/Controllers/CubeController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_GameFiles/Scripts/Interfaces/IDrawing.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_GameFiles/Scripts/ScriptableObjects/ConstructionData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_GameFiles/Scripts/Structs/VertexTriangles.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_GameFiles/Scripts/Utilities/ColliderClamp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_GameFiles/Scripts/Utilities/MaterialPropertyBlockUtility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@4.5.2/AssetIdRemapUtility/Editor/AssetIdRemapEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../ZyngaCaseStudy/Assets/_GameFiles/Scripts/Controllers/ExplodeEffectController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -81,7 +83,9 @@
       <workItem from="1675427632566" duration="25143000" />
       <workItem from="1675489597941" duration="16650000" />
       <workItem from="1675535222504" duration="13346000" />
-      <workItem from="1675588666736" duration="3475000" />
+      <workItem from="1675588666736" duration="4029000" />
+      <workItem from="1675684806611" duration="16648000" />
+      <workItem from="1675776108300" duration="21996000" />
     </task>
     <servers />
   </component>

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using _GameFiles.Scripts.Controllers;
+﻿using _GameFiles.Scripts.Controllers;
 using _GameFiles.Scripts.EventArgs;
 using _GameFiles.Scripts.ScriptableObjects;
 using _GameFiles.Scripts.Utilities;
@@ -68,17 +65,23 @@ namespace _GameFiles.Scripts.Managers
             }
         }
 
+        //When the player can draw.
         private void DrawEnabled()
         {
             if (!IsDrawArea) return;
             
             _currentLine.ResetDrawing();
-            _currentLine.transform.position = Vector3.zero;
-            _currentLine.transform.localScale = Vector3.one;
+            
+            var transform1 = _currentLine.transform;
+            
+            transform1.position = Vector3.zero;
+            transform1.localScale = Vector3.one;
+            
             _isEnabled = true;
             _currentLine.gameObject.SetActive(true);
         }
 
+        //When the player stops drawing.
         private void DrawDisabled()
         {
             if (_currentLine.PointsCount >=4)
@@ -93,6 +96,7 @@ namespace _GameFiles.Scripts.Managers
             _isEnabled = false;
         }
 
+        //Checks the player drawing in the drawing area and sending each position.
         private void Draw()
         {
             if (!IsDrawArea) return;
@@ -102,17 +106,18 @@ namespace _GameFiles.Scripts.Managers
            _currentLine.AddPoint(mousePos);
         }
 
+        //Creates drawing when the player stops drawing.
         private void CreateDraw()
         {
             _drawing = _currentLine;
             
-            Vector3 middlePoint = new Vector3(-4, 10, 24.4f);
-            Vector3 offset = _drawing.transform.position - _drawing.transform.TransformPoint(_drawing.LineRenderer.bounds.center);
-            _drawing.transform.position = middlePoint + offset;
-            _drawing.transform.localScale *= 2;
+            Vector3 middlePoint = new Vector3(-4, 12, 24.4f);
+            Transform transform1;
+            Vector3 offset = _drawing.transform.position - (transform1 = _drawing.transform).TransformPoint(_drawing.LineRenderer.bounds.center);
+            transform1.position = middlePoint + offset;
+            transform1.localScale *= 2;
             float slopeAngle = AngleUtility.GetAngleOfLineBetweenTwoPoints(_drawing.LineRenderer.GetPosition(0),
                                                                                 _drawing.LineRenderer.GetPosition(1));
-            Debug.Log(slopeAngle + " pos : " + _drawing.LineRenderer.GetPosition(1));
             Broadcast(new DrawingIsCreatedEventArgs(_drawing.GetMinPoint(), slopeAngle));
         }
     }

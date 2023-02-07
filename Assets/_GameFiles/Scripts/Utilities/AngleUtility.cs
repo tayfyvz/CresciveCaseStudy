@@ -5,6 +5,7 @@ namespace _GameFiles.Scripts.Utilities
 {
     public static class AngleUtility
     {
+        //Calculates the angle between to points.
         public static float GetAngleOfLineBetweenTwoPoints(Vector2 p1, Vector3 p2)
         {
             float xDiff = p2.x - p1.x;

@@ -6,6 +6,8 @@ using UnityEngine;
 
 namespace _GameFiles.Scripts.AppInitializer
 {
+    //Builds the event driven infrastructure by setting up the communication between
+    // AppManager, GameManager and UIManager.
     public class AppInitializer : MonoBehaviour
     {
 
